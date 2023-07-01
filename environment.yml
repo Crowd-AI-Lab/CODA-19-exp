@@ -1,6 +1,5 @@
 name: coda19-exp
 channels:
-  - defaults
   - pytorch
   - nvidia
   - conda-forge
