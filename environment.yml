@@ -11,6 +11,7 @@ dependencies:
   - pytorch
   - torchaudio
   - pytorch-cuda=11.7
+  - pip
   - pip:
     - transformers==4.28.1
     - accelerate==0.18.0
