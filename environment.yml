@@ -1,0 +1,29 @@
+name: coda19-exp
+channels:
+  - defaults
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.9
+  - cudatoolkit=10.2
+  - torchvision
+  - pytorch
+  - torchaudio
+  - pytorch-cuda=11.7
+  - pip:
+    - transformers==4.28.1
+    - accelerate==0.18.0
+    - typer==0.7.0
+    - protobuf==3.20.0
+    - comet-ml
+    - pandas
+    - numpy
+    - tqdm
+    - sentencepiece
+    - openai
+    - gpustat
+variables:
+  COMET_API_KEY: ooooooooooooooooooooooooooo
+  OPENAI_API_KEY: sk-oooooooooooooooooooooooooooooooooooooooo
+  PYTHONUSERBASE: intentionally-disabled
