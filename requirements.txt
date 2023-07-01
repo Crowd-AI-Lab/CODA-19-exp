@@ -1,6 +1,4 @@
-torch==2.0.1
-torchvision
-torchaudio
+torch >= 2.0
 transformers==4.28.1
 accelerate==0.18.0
 typer==0.7.0
@@ -8,7 +6,12 @@ protobuf==3.20.0
 comet-ml
 pandas
 numpy
+scipy
+scikit-learn
 tqdm
-sentencepiece
+sentencepiece != 0.1.92
 openai
 gpustat
+datasets==2.5.1
+evaluate
+numpyencoder

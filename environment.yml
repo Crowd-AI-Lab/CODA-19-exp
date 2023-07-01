@@ -2,14 +2,14 @@ name: coda19-exp
 channels:
   - pytorch
   - nvidia
+  - huggingface
   - conda-forge
 dependencies:
   - python=3.9
-  - cudatoolkit=10.2
+  - pytorch::pytorch
   - torchvision
-  - pytorch
   - torchaudio
-  - pytorch-cuda=11.7
+  - pytorch-cuda=11.8
   - pip
   - pip:
     - transformers==4.28.1
@@ -19,10 +19,16 @@ dependencies:
     - comet-ml
     - pandas
     - numpy
+    - scipy
+    - scikit-learn
     - tqdm
     - sentencepiece
     - openai
     - gpustat
+    - datasets==2.5.1
+    - evaluate
+    - numpyencoder
+    - aiohttp
 variables:
   COMET_API_KEY: ooooooooooooooooooooooooooo
   OPENAI_API_KEY: sk-oooooooooooooooooooooooooooooooooooooooo
