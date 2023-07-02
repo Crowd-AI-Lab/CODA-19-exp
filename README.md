@@ -3,6 +3,27 @@ This repo contains code for the paper, Good Data, Large Data, or No Data? Compar
 
 We are organizing the code. Stay tuned!
 
+## Environment Setup
+If you use conda to manage your environment, you can create a new one using our `environment.yml` file. If you plan to use `comet_ml` to monitor the training status, you will need to modify the `COMET_API_KEY`. If you plan to run chatGPT or GPT-4 experiment, you will need to modify the `OPENAI_API_KEY`. Both of them can be specified in the `environment.yml` file.
+
+**environment.yml**
+```yml
+variables:
+  COMET_API_KEY: ooooooooooooooooooooooooooo
+  OPENAI_API_KEY: sk-oooooooooooooooooooooooooooooooooooooooo
+```
+
+To create a new conda environment named `coda19-exp`, please run the following command.
+```bash
+conda env create --name coda19-exp --file environment.yml
+conda activate conda19-exp
+```
+
+If you have your own python installed, you can also use `pip` to install all the packages.
+```bash
+python -m pip install requirements.txt
+```
+
 
 ## Getting Data
 In this project, we conducted experiments using [CODA-19](https://github.com/windx0303/CODA-19) and [PubMed](https://github.com/Franck-Dernoncourt/pubmed-rct) dataset.
@@ -87,8 +108,31 @@ python src/process_data_pubmed.py mix-data \
 ```
 
 ## Fine-tuned Model Experiment
+We modify the `src/run_glue.py` file provided by HuggingFace to fine-tune all the models.
+All the basic settings are included in the `script/train_arg.sh` for calling `src/run_glue.py`.
+You will need to specify `data_folder`, `output_folder`, `model_name`, and `cuda_device` when running `script/train_arg.sh`. For example, the following command will fine-tune `allenai/scibert_scivocab_uncased` with `data/coda19-position` dataset using `cuda:0`. The output model will be saved to `model/coda19-position-scibert_scivocab_uncased` folder.
+```bash
+sh script/train_arg.sh \
+  "data/coda19-position" \
+  "model/coda19-position-scibert_scivocab_uncased" \
+  "allenai/scibert_scivocab_uncased" \
+  0
+```
 
+In this paper, we fine-tuned a total of 7 models:
+1. coda19
+2. coda19-position
+3. pubmed
+4. pubmed-position
+5. simple-mix-position
+6. upsampling-mix-position
+7. two-staged-mix-position: train the model with `pubmed-position-coda19-label` and `coda19-position` sequentially
 
+To run all the experiment at once, you can run `script/train_exp.sh` (the default gpu is cuda:0, please modify it accordingly).
+```bash
+sh script/train_exp.sh
+```
 
 ## LLM Experiment
+
 
