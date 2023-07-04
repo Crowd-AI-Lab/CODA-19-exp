@@ -229,7 +229,7 @@ python src/llm_exp.py exp \
         --output-folder output/gpt4-few-shot
 ```
 
-### Prediction
+### Calculate Scores
 We implement the `compute-score` command in `src/llm_exp.py`. To use it, you will need to specify the following arguments:
 1. `test-file`: the path for the test file
 2. `output-folder`: the path for the LLM's output folder (e.g., output/gpt4-few-shot)
