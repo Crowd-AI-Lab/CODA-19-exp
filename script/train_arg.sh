@@ -28,7 +28,7 @@ CUDA_VISIBLE_DEVICES=${CUDA_VISIBLE_DEVICES} python src/run_glue.py \
   --gradient_accumulation_steps 1 \
   --auto_find_batch_size \
   --learning_rate 1e-5 \
-  --num_train_epochs 1 \
+  --num_train_epochs 20 \
   --warmup_ratio 0.1 \
   --fp16 true \
   --output_dir "${OUTPUT_FOLDER}" \
@@ -41,4 +41,5 @@ CUDA_VISIBLE_DEVICES=${CUDA_VISIBLE_DEVICES} python src/run_glue.py \
   --save_total_limit 1 \
   --metric_for_best_model "accuracy" \
   --early_stopping_patience 6 \
-  --report_to "comet_ml"
+  --report_to "comet_ml" \
+  --ignore_mismatched_sizes
