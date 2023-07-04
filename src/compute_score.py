@@ -36,18 +36,5 @@ def comptue_score(
     )
     print("Micro F1 Score", scores[2])
 
-# def parse_args():
-#     parser = argparse.ArgumentParser()
-#     parser.add_argument("-prediction", type=Path, required=True)
-#     parser.add_argument("-answer", type=Path, required=True)
-#     return parser.parse_args()
-
-# def main():
-#     args = parse_args()
-#     comptue_score(
-#         predict_file=args.prediction,
-#         answer_file=args.answer,
-#     )
-
 if __name__ == "__main__":
     app()

@@ -22,17 +22,6 @@ mapping = {
     "CONCLUSIONS": "finding",
 }
 
-# def parse_args():
-#     parser = argparse.ArgumentParser()
-#     parser.add_argument("--model_name_or_path", type=str, help="Path to pretrained model or model identifier from huggingface.co/models")
-#     parser.add_argument("--test_filename", type=str, help="Path to test file")
-#     parser.add_argument("--text_key", type=str, help="Key of text in test file", default="text")
-#     parser.add_argument("--output_filename", type=str, help="Path to output file")
-#     parser.add_argument("--batch_size", type=int, help="Batch size", default=32)
-#     parser.add_argument("--device", type=str, help="Device to use", default="cuda:0")
-#     parser.add_argument("--label_mapping", action="store_true", help="Whether to map label to CODA space")
-#     return parser.parse_args()
-
 @app.command()
 @torch.no_grad()
 def predict(
