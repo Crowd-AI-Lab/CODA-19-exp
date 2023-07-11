@@ -1,7 +1,7 @@
 # CODA-19-exp
 This repo contains code for the paper, Good Data, Large Data, or No Data? Comparing Three Approaches in Developing Research Aspect Classifiers for Biomedical Papers.
 
-We are organizing the code. Stay tuned!
+You can find the paper here: https://aclanthology.org/2023.bionlp-1.8/
 
 ## Environment Setup
 If you use conda to manage your environment, you can create a new one using our `environment.yml` file. If you plan to use `comet_ml` to monitor the training status, you will need to modify the `COMET_API_KEY`. If you plan to run chatGPT or GPT-4 experiment, you will need to modify the `OPENAI_API_KEY`. Both of them can be specified in the `environment.yml` file.
@@ -259,10 +259,17 @@ bash script/compute_llm_scores.sh
 ## Citation
 If you use the code or results from the paper, please consider citing our paper. We will update it using the BioNLP's proceeding soon.
 ```bibtex
-@article{chandrasekhar2023good,
-  title={Good Data, Large Data, or No Data? Comparing Three Approaches in Developing Research Aspect Classifiers for Biomedical Papers},
-  author={Chandrasekhar, Shreya and Huang, Chieh-Yang and Huang, Ting-Hao'Kenneth'},
-  journal={arXiv preprint arXiv:2306.04820},
-  year={2023}
+@inproceedings{chandrasekhar-etal-2023-good,
+    title = "Good Data, Large Data, or No Data? Comparing Three Approaches in Developing Research Aspect Classifiers for Biomedical Papers",
+    author = "Chandrasekhar, Shreya  and
+      Huang, Chieh-Yang  and
+      Huang, Ting-Hao",
+    booktitle = "The 22nd Workshop on Biomedical Natural Language Processing and BioNLP Shared Tasks",
+    month = july,
+    year = "2023",
+    address = "Toronto, Canada",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.bionlp-1.8",
+    pages = "103--113",
 }
 ```
