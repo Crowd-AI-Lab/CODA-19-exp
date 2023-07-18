@@ -257,7 +257,7 @@ bash script/compute_llm_scores.sh
 ```
 
 ## Citation
-If you use the code or results from the paper, please consider citing our paper. We will update it using the BioNLP's proceeding soon.
+If you use the code or results from the paper, please consider citing our paper.
 ```bibtex
 @inproceedings{chandrasekhar-etal-2023-good,
     title = "Good Data, Large Data, or No Data? Comparing Three Approaches in Developing Research Aspect Classifiers for Biomedical Papers",
